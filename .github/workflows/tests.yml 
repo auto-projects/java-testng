@@ -1,43 +1,10 @@
-name: Java Playwright TestNG CI
+name: Test Actions
 
-# Manual trigger to ensure workflow appears immediately
 on:
   workflow_dispatch:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
 
 jobs:
-  test:
+  hello:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: 17
-          distribution: temurin
-
-      - name: Install Playwright Browsers
-        run: mvn playwright:install
-
-      - name: Run Maven Tests
-        run: mvn clean test -Denv=ci -Dheadless=true
-
-      - name: Upload TestNG Reports
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: testng-results
-          path: target/surefire-reports/
-
-      - name: Upload Allure Reports
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: allure-results
-          path: target/allure-results/
+      - run: echo "GitHub Actions is working!"
