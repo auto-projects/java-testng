@@ -23,7 +23,7 @@ public class LoginApiTest extends BaseApiTest {
         System.out.println(response.text());
     }
 
-    @Test
+    @Test(dependsOnMethods = "loginApiSimulation")
     public void getUserTest() {
         // GET request example
         APIResponse response = api.get("/users/1");
