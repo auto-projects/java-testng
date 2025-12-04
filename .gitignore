@@ -1,9 +1,10 @@
 # Maven
-/target/
+target/
 
 # IntelliJ
 .idea/
 *.iml
 
-# Playwright browsers
-/playwright-report/
+# Playwright
+playwright-report/
+test-results/
