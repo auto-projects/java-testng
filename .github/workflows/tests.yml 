@@ -1,10 +1,14 @@
-name: Test Actions
+name: Hello Test Workflow
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
-  hello:
+  hello_job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "GitHub Actions is working!"
+      - name: Print a test message
+        run: echo "GitHub Actions is working!"
