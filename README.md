@@ -1,14 +1,6 @@
 🚀 Playwright + TestNG Automation Framework (UI + API)
 
-This project is a Java-based automation framework built using:
-
-Playwright (UI + API testing)
-
-TestNG (test runner, parallel execution, retry)
-
-Maven (build + dependency management)
-
-Allure (reporting)
+Java-based automation framework built using: Playwright (UI + API testing), TestNG (test runner, parallel execution, retry), Maven (build + dependency management), Allure (reporting)
 
  - 1. Test runners for parallel execution & dependencies
    - testng.xml - responsible for the parallel execution; parallel="methods" → TestNG runs tests in parallel and thread-count="5" → Up to 5 tests run at the same time
